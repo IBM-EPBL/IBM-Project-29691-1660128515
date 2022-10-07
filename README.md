@@ -8,7 +8,7 @@ monisha s
 
 Team Members
 1 NITHYA.M
-2 MONISHA.S
+2 S. MONISHA
 3 NATHIYA.P
 4 DEEPIKA.V
 
