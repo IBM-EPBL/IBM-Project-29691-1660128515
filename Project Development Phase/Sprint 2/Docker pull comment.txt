@@ -1,0 +1,1 @@
+docker pull Dhanapal/customer-care-registry
