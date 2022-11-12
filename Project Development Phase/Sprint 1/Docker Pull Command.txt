@@ -1,0 +1,1 @@
+docker pull Monisha/customer-care-registry
