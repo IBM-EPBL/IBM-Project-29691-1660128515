@@ -1,0 +1,92 @@
+{% extends 'agent dashboard.html' %}
+
+{% block title %}
+    Change Password
+{% endblock %}
+
+{% block right %}
+    <div class="profile-div">
+        <h1>Change Password</h1>
+
+        <div class="new-t-div">
+            <p>Feeling your old password is not good enough?</p>
+            
+            <div class="change-password-div">
+                <form action="{{ url_for('agent.change') }}" method="POST">
+                    <label>Password</label>
+                    <input name="password" class="change-pass-in" id="password-input" type="password" placeholder="Current Password" />
+
+                    <label>New Password</label>
+                    <input name="new-pass-1" class="change-pass-in" id="password-input1" type="password" placeholder="New Password" />
+
+                    <label>Confirm Password</label>
+                    <input name="new-pass-2" class="change-pass-in" id="password-input2" type="password" placeholder="New Password" /> <br/>
+                    
+                    <p>Use 8 or more characters with a mix of just letters and numbers</p>
+
+                    <div class="show-pass-div">
+                        <input type="checkbox" onclick="showPassword()" style="height: 20px;"/>
+                        <p>Show Password</p>
+                    </div>
+                    
+                    <button style="width: 150px;" class="submit-btn">Submit</button>
+                </form>
+            </div{% extends 'dashboard.html' %}
+
+{% block left %}
+    <div class="links-left-div">
+        <ul  id="dash-parent-list">
+            <li>
+                <a href="{{ url_for('agent.profile') }}">
+                    <div class="link-items">
+                        <div><i class="fa fa-user" aria-hidden="true"></i></div>
+                        <h3>Profile</h3>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a href="{{ url_for('agent.assigned') }}">
+                    <div class="link-items">
+                        <div><i class="fa fa-ticket" aria-hidden="true"></i></div>
+                        <h3>Tickets Assigned</h3>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a href="{{ url_for('agent.change') }}">
+                    <div class="link-items">
+                        <div><i class="fa fa-key" aria-hidden="true"></i></div>
+                        <h3>Change Password</h3>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a href="{{ url_for('agent.about') }}">
+                    <div class="link-items">
+                        <div><i class="fa fa-info" aria-hidden="true"></i></div>
+                        <h3>About</h3>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a href="{{ url_for('agent.support') }}">
+                    <div class="link-items">
+                        <div><i class="fa fa-comments-o" aria-hidden="true"></i></div>
+                        <h3>Feedback</h3>
+                    </div>
+                </a>
+            </li>
+        </ul>
+    </div>
+
+    <script>
+        window.onload = function highlight(){
+            id = '{{ id }}'
+            var element = document.getElementById('dash-parent-list').children.item(id);
+            element.className = "active";
+        }
+    </script>
+{% endblock %}>
+        </div>
+    </div>
+{% endblock %}
